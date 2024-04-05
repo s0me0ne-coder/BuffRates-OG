@@ -49,6 +49,11 @@ dependencies {
 
 }
 
+tasks.withType(AbstractArchiveTask).configureEach {
+    preserveFileTimestamps = false
+    reproducibleFileOrder = true
+}
+
 shadowJar {
 
     minimize()
